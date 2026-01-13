@@ -991,7 +991,7 @@ namespace ProsolOnline.Controllers
         //    int cunt = 0;
         //    string selection = Request.Form["selecteditem"];
         //    var selecteditem = JsonConvert.DeserializeObject<List<Selection>>(selection);
-        //    using (IAmazonS3 s3Client = new AmazonS3Client("AKIA3ODLTYZSURKAPRIN", "cQ+pllhE3gw0QNfRqZk81UhY2eFe5iCk4l97h6NU", Amazon.RegionEndpoint.MESouth1))
+        //    using (IAmazonS3 s3Client = new AmazonS3Client("", Amazon.RegionEndpoint.MESouth1))
         //    {
         //        S3DirectoryInfo s3DirectoryInfo = new Amazon.S3.IO.S3DirectoryInfo(s3Client, "adport-images");
         //        var fList = s3DirectoryInfo.GetFiles("*");
