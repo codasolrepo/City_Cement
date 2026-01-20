@@ -156,8 +156,17 @@ namespace ProsolOnline.Controllers
             ViewBag.p6c5 = "pointer-events:none;color:#ccc;";
             ViewBag.p6c6 = "pointer-events:none;color:#ccc;";
 
-          
-           
+            //Asset
+            ViewBag.AS4c1 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c5 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c6 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c7 = "pointer-events:none;color:#ccc;";
+            ViewBag.ASW4c8 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c9 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c10 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c11 = "pointer-events:none;color:#ccc;";
+            ViewBag.AS4c12 = "pointer-events:none;color:#ccc;";
+
 
             // ViewBag.p7c1 = "none";
             //ViewBag.p7c2 = "none";
@@ -977,10 +986,171 @@ namespace ProsolOnline.Controllers
                     }
 
                 }
+                ViewBag.AS8c4 = "cursor: not-allowed";
+                ViewBag.AS8c5 = "cursor: not-allowed";
+                ViewBag.AS8c6 = "cursor: not-allowed";
+                ViewBag.AS8c7 = "cursor: not-allowed";
+                ViewBag.ASW8c8 = "cursor: not-allowed";
+                ViewBag.AS8c9 = "cursor: not-allowed";
+                ViewBag.AS8c10 = "cursor: not-allowed";
+                ViewBag.AS8c11 = "cursor: not-allowed";
+                ViewBag.AS8c12 = "cursor: not-allowed";
 
-        
-                    if (Array.IndexOf(ModulesArray, "Asset") > -1)
+
+                if (Array.IndexOf(ModulesArray, "Asset") > -1)
+                {
+                    
+                        ViewBag.t10 = "none";
+                    if (Array.IndexOf(stringArray, "Asset Dashboard") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
                     {
+                        
+                        ViewBag.AS8c4 = "block";
+                        ViewBag.AS4c1 = "block";
+                        if (pth.Contains("far/assetdashboard"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc4 = "nav-active";
+                        }
+                    }
+                    
+                    if (Array.IndexOf(stringArray, "Asset Search") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c5 = "block";
+                        ViewBag.AS4c5 = "block";
+                        if (pth.Contains("far/assetsearch"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc5 = "nav-active";
+                        }
+                    }
+                    
+                    if (Array.IndexOf(stringArray, "Asset Dictionary") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c6 = "block";
+                        ViewBag.AS4c6 = "block";
+                        if (pth.Contains("far/assetdictionary"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc6 = "nav-active";
+                        }
+                    }
+                    
+                    if (Array.IndexOf(stringArray, "Asset BulkUpload") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c7 = "block";
+                        ViewBag.AS4c7 = "block";
+                        if (pth.Contains("far/asset_bulkupload"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc7 = "nav-active";
+                        }
+                    } 
+                    if (Array.IndexOf(stringArray, "Asset Assign Work") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.ASW8c8 = "block";
+                        ViewBag.ASW4c8 = "block";
+                        if (pth.Contains("far/assetassignwork"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_SWc8 = "nav-active";
+                        }
+                    } 
+                    if (Array.IndexOf(stringArray, "Asset Catalogue") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c9 = "block";
+                        ViewBag.AS4c9 = "block";
+                        if (pth.Contains("far/assetregistry"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc9 = "nav-active";
+                        }
+                    } 
+                    if (Array.IndexOf(stringArray, "Asset Report") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c10 = "block";
+                        ViewBag.AS4c10 = "block";
+                        if (pth.Contains("far/assetreport"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc10 = "nav-active";
+                        }
+                    } 
+                    if (Array.IndexOf(stringArray, "Asset Tools") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c11 = "block";
+                        ViewBag.AS4c11 = "block";
+                        if (pth.Contains("far/assettools"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc11 = "nav-active";
+                        }
+                    } 
+                    if (Array.IndexOf(stringArray, "Asset QR") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)
+                    {
+                        
+                        ViewBag.AS8c12 = "block";
+                        ViewBag.AS4c12 = "block";
+                        if (pth.Contains("far/assetqr"))
+                        {
+                            ViewBag.A80 = "active";
+                            ViewBag.A8_Sc12 = "nav-active";
+                        }
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     //Asset
                     if (Array.IndexOf(stringArray, "CSIR") > -1 || Array.IndexOf(stringArray, "SuperAdmin") > -1)

@@ -1414,7 +1414,7 @@ namespace Prosol.Core
                 //    }
                 //}
 
-                foreach (DataRow drw1 in dt1.Rows)
+               /* foreach (DataRow drw1 in dt1.Rows)
                 {
                     var query1 = Query.Or(Query.EQ("Itemcode", drw1[0].ToString()), Query.EQ("Materialcode", drw1[0].ToString()));
                     var mdl = _datamasterRepository.FindOne(query1);
@@ -1428,7 +1428,7 @@ namespace Prosol.Core
                         _datamasterRepository.Add(mdl);
                         cunt++;
                     }
-                }
+                }*/
 
                 //foreach (DataRow drw1 in dt1.Rows)
                 //{
@@ -1462,34 +1462,34 @@ namespace Prosol.Core
                 //    }
                 //}
 
-                //var lst = _datamasterRepository.FindAll().ToList();
-                //foreach (DataRow drw1 in dt1.Rows)
-                //{
-                //    //int lstCount = lst.Count() + cunt;
-                //    var mdl = new Prosol_Datamaster();
-                //    var erp = new Prosol_ERPInfo();
-                //    //var itemCode = "CODA-N-3" + lstCount.ToString("D5");
-                //    var itemCode = drw1[14].ToString();
-                //    //mdl.Itemcode = drw1[0].ToString();
-                //    mdl.Materialcode = drw1[0].ToString();
-                //    mdl.exMaterialcode = drw1[1].ToString();
-                //    mdl.Legacy = drw1[2].ToString();
-                //    mdl.Legacy2 = drw1[3].ToString();
-                //    mdl.UOM = drw1[4].ToString();
-                //    mdl.Itemcode = itemCode;
-                //    erp.Itemcode = itemCode;
-                //    erp.MaterialStrategicGroup = drw1[5].ToString();
-                //    erp.MaterialStrategicGroup_ = drw1[6].ToString();
-                //    erp.MRPType = drw1[7].ToString();
-                //    erp.MRPType_ = drw1[8].ToString();
-                //    erp.Materialtype = drw1[9].ToString();
-                //    erp.Materialtype_ = drw1[10].ToString();
-                //    erp.ReOrderPoint_ = drw1[11].ToString();
-                //    erp.SafetyStock_ = drw1[12].ToString();
-                //    erp.MaxStockLevel_ = drw1[13].ToString();
-                //    _datamasterRepository.Add(mdl);
-                //    cunt++;
-                //}
+                var lst = _datamasterRepository.FindAll().ToList();
+                foreach (DataRow drw1 in dt1.Rows)
+                {
+                    //int lstCount = lst.Count() + cunt;
+                    var mdl = new Prosol_Datamaster();
+                    var erp = new Prosol_ERPInfo();
+                    //var itemCode = "CODA-N-3" + lstCount.ToString("D5");
+                    var itemCode = drw1[14].ToString();
+                    //mdl.Itemcode = drw1[0].ToString();
+                    mdl.Materialcode = drw1[0].ToString();
+                    mdl.exMaterialcode = drw1[1].ToString();
+                    mdl.Legacy = drw1[2].ToString();
+                    mdl.Legacy2 = drw1[3].ToString();
+                    mdl.UOM = drw1[4].ToString();
+                    mdl.Itemcode = itemCode;
+                    erp.Itemcode = itemCode;
+                    erp.MaterialStrategicGroup = drw1[5].ToString();
+                    erp.MaterialStrategicGroup_ = drw1[6].ToString();
+                    erp.MRPType = drw1[7].ToString();
+                    erp.MRPType_ = drw1[8].ToString();
+                    erp.Materialtype = drw1[9].ToString();
+                    erp.Materialtype_ = drw1[10].ToString();
+                    erp.ReOrderPoint_ = drw1[11].ToString();
+                    erp.SafetyStock_ = drw1[12].ToString();
+                    erp.MaxStockLevel_ = drw1[13].ToString();
+                    _datamasterRepository.Add(mdl);
+                    cunt++;
+                }
 
                 //var allQry = Query.Or(Query.Matches("AssetImages.AssetImgs", new BsonRegularExpression(new Regex("iStock", RegexOptions.IgnoreCase))),Query.Matches("AssetImages.MatImgs", new BsonRegularExpression(new Regex("iStock", RegexOptions.IgnoreCase))),Query.Matches("AssetImages.AssetImgs", new BsonRegularExpression(new Regex("iStock", RegexOptions.IgnoreCase))),Query.Matches("AssetImages.AssetImgs", new BsonRegularExpression(new Regex("iStock", RegexOptions.IgnoreCase))),Query.Matches("AssetImages.AssetImgs", new BsonRegularExpression(new Regex("iStock", RegexOptions.IgnoreCase))));
 

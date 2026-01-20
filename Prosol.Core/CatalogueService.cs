@@ -595,7 +595,7 @@ namespace Prosol.Core
             foreach (DataRow drw1 in dt1.Rows)
             {
 
-                var query1 = Query.And(Query.EQ("Materialcode", drw1[0].ToString()));
+                var query1 = Query.Or(Query.EQ("Materialcode", drw1[0].ToString()),Query.EQ("Itemcode",drw1[0].ToString()));
                 var mdl1 = _DatamasterRepository.FindOne(query1);
 
                 if (mdl1 != null)
