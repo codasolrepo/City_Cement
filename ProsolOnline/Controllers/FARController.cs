@@ -82,10 +82,12 @@ namespace ProsolOnline.Controllers
         }
         [Authorize]
         public ActionResult AssetDashboard()
-        {
-            return View();
-
-
+        {            
+            if (CheckAccess("Asset Dashboard") == 1)
+                return View();
+            else if (CheckAccess("Asset Dashboard") == 0)
+                return View("Denied");
+            else return View("Login");
         }
         [Authorize]
         public ActionResult AssetAssignwork()
